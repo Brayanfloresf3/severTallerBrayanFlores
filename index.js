@@ -17,7 +17,7 @@ server.use(cors());
 server.use(morgan('dev'));
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }))
-
+ 
 // Rutas
 server.use('/api/tiendas', tiendaRouter);
 server.use('/api/productos', productoRouter);
