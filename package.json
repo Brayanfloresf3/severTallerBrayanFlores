@@ -1,0 +1,29 @@
+{
+  "name": "node-express-api",
+  "description": "Simple api sample in Node",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "dataTiendas": "node ./models/data/tiendasData.js",
+    "dataProductos": "node ./models/data/productosData.js",
+    "dataEmpleados": "node ./models/data/empleadosData.js"
+  },
+  "author": "Google LLC",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.1",
+    "mongoose": "^8.7.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.12.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.3.3"
+  }
+}
