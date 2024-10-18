@@ -1,10 +1,10 @@
-const error_handler = (error,req,res,next) => {
+const errorHandler = (error, req, res, next) => {
     console.log(error);
     return res.status(500).json({
         success: false,
-        message: "Ocurrió un error en el servidor",
-        error: error.message || "Error desconocido"
-    })
+        message: "A server error occurred",
+        error: error.message || "Unknown error"
+    });
 }
 
-export default error_handler
+export default errorHandler;

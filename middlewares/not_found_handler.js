@@ -1,7 +1,8 @@
-const not_found_handler = (req,res,next) => {
+const notFoundHandler = (req, res, next) => {
     return res.status(404).json({
         success: false,
-        message: `la peticion con el metodo ${req.method} y la ruta ${req.originalUrl} no existe`
-    }) 
+        message: `The request with method ${req.method} and route ${req.originalUrl} does not exist`
+    });
 }
-export default not_found_handler
+
+export default notFoundHandler;

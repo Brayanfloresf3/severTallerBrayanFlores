@@ -1,14 +1,13 @@
-import { Router } from "express"
-import tiendaRouter from "../routes/tiendaRouter.js"
-import productoRouter from "./productoRouter.js"
-import empleadoRouter from "./empleadoRouter.js"
+import { Router } from "express";
+import storeRouter from "../routes/storeRouter.js";
+import productRouter from "./productRouter.js";
+import employeeRouter from "./employeeRouter.js";
 
+const router = Router();
 
-const router = Router()
+router.use("/stores", storeRouter);
+router.use("/products", productRouter);
+router.use("/employees", employeeRouter);
+router.use("/");
 
-router.use("/tiendas", tiendaRouter)
-router.use("/productos", productoRouter)
-router.use("/empleados", empleadoRouter)
-router.use("/")
-
-export default router
+export default router;

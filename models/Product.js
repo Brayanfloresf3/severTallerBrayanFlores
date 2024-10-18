@@ -1,21 +1,21 @@
 import { Schema, model } from "mongoose";
 
-let collection = 'productos'
+let collection = 'products';
 
 let schema = new Schema({
-    nombre: { 
+    name: { 
         type: String, 
         required: true 
     },
-    marca: { 
+    brand: { 
         type: String, 
         required: true 
     },
-    tipo: { 
+    type: { 
         type: String, 
         required: true 
     },
-    precio: { 
+    price: { 
         type: Number, 
         required: true 
     }
@@ -23,6 +23,6 @@ let schema = new Schema({
     timestamps: true 
 });
 
-let Productos = model(collection , schema)
+let Products = model(collection, schema);
 
-export default Productos
+export default Products;

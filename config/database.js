@@ -1,18 +1,16 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
-let url = process.env.URI_MONGO
+let url = process.env.URI_MONGO;
 
 // console.log(url)
 
-async function conectionDataBase(url) {
+async function connectDatabase(url) {
     try {
-      await  mongoose.connect(url)
-        console.log("Base de datos Conectada a Mongo")
+        await mongoose.connect(url);
+        console.log("Database connected to Mongo");
     } catch (error) {
         console.log(error);
     }
 }
 
-conectionDataBase(url)
-
-
+connectDatabase(url);

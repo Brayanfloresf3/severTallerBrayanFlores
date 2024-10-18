@@ -8,9 +8,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "dataTiendas": "node ./models/data/tiendasData.js",
-    "dataProductos": "node ./models/data/productosData.js",
-    "dataEmpleados": "node ./models/data/empleadosData.js"
+    "dataStores": "node ./models/data/stores.js",
+    "dataProducts": "node ./models/data/products.js",
+    "dataEmployees": "node ./models/data/employees.js"
   },
   "author": "Google LLC",
   "license": "Apache-2.0",

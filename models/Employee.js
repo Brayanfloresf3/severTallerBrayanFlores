@@ -1,17 +1,17 @@
 import { Schema, model } from "mongoose";
 
-let collection = 'empleados'
+let collection = 'employees';
 
 let schema = new Schema({
-    nombre: {
+    name: {
         type: String,
         required: true
     },
-    cargo: {
+    position: {
         type: String,
         required: true
     },
-    salario: {
+    salary: {
         type: Number,
         required: true
     }
@@ -19,6 +19,6 @@ let schema = new Schema({
     timestamps: true
 });
 
-let Empleados = model(collection, schema)
+let Employees = model(collection, schema);
 
-export default Empleados
+export default Employees;
