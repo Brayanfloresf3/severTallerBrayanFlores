@@ -1,8 +1,7 @@
-
 import Tienda from "../../models/Tienda.js";
 
-let createTienda = async (req, res) => {
-    try {
+let crearTiendas = async (req, res) => {
+    try { 
         const nuevasTiendas = req.body;
 
         // Verificar si es un array
@@ -12,21 +11,18 @@ let createTienda = async (req, res) => {
             return res.status(201).json({
                 response: guardar,
                 message: 'Tiendas creadas correctamente',
-            });
+            }); 
         } else {
             // Crear una sola tienda
             const guardar = await Tienda.create(nuevasTiendas);
             return res.status(201).json({
                 response: guardar,
                 message: 'Tienda creada correctamente',
-            });
+            }); 
         }
     } catch (error) {
-        console.error(error);
-        return res.status(500).json({
-            response: error,
-        });
+        next(error);   
     }
 };
 
-export default createTienda;
+export default crearTiendas;

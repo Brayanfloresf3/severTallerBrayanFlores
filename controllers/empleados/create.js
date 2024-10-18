@@ -1,6 +1,6 @@
 import Empleados from "../../models/Empleado.js";
 
-let createEmpleados = async (req, res) => {
+let crearEmpleados = async (req, res) => {
     try {
       
         const nuevosEmpleados = req.body;
@@ -22,12 +22,9 @@ let createEmpleados = async (req, res) => {
             });
         }
     } catch (error) {
-        console.error(error);
-        return res.status(500).json({
-            res: error,
-        });
+        next(error);
     }
 };
 
-export default createEmpleados;
+export default crearEmpleados;
 

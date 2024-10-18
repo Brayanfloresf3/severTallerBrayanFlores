@@ -1,7 +1,7 @@
 import 'dotenv/config.js'
 import '../../config/database.js'
 import Productos from '../../models/Producto.js'
-
+ 
 let productos = [
   { nombre: "pizza bbq", marca: "pizza hut", tipo: "pizza", precio: 15 },
   { nombre: "ensalada de lentejas", marca: "fresh & co", tipo: "ensaladas", precio: 12 },

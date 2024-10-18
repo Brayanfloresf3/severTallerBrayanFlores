@@ -1,6 +1,6 @@
 import Productos from "../../models/Producto.js";
 
-let createProducto = async (req, res) => {
+let crearProductos = async (req, res) => {
     try {
         const nuevosProductos = req.body;
 
@@ -21,11 +21,8 @@ let createProducto = async (req, res) => {
             });
         }
     } catch (error) {
-        console.error(error);
-        return res.status(500).json({
-            res: error,
-        });
+        next(error);
     }
 };
 
-export default createProducto;
+export default crearProductos;

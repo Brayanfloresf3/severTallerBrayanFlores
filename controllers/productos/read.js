@@ -1,4 +1,5 @@
 import Productos from "../../models/Producto.js"
+import error_handler from "../../middlewares/error_handler.js";
 
 let todosLosProductos = async (req, res) => {
     try {
